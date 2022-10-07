@@ -1,0 +1,229 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+$color-white: #fff;
+$color-buzz: #5B26CF;
+$color-red: #FF0000CC;
+$color-light-blue: #2D8ED8;
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+    // width: 100%;
+
+
+    .container {
+        display: flex;
+        height: 100vh;
+       
+       
+
+        .d-flex {
+            position: relative;
+            width: 60%;
+            height: 100vh;
+            background: url(../../images/banner.jpeg) center center;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            padding: 2.5rem;
+
+            &--logo {
+                position: absolute;
+                top: 59px;
+            }
+
+            &--heading {
+                font-size: 32px;
+                color: $color-white;
+                margin-bottom: 2rem;
+            }
+            &--subtitle {
+                color: $color-white;
+                font-size: 18px;
+            }
+
+            
+        }
+
+        .b-flex {
+            width: 40%;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            height: 100vh;
+
+            &--title {
+                padding-top: 1rem;
+                font-weight: bolder;
+                font-size: 28px;
+                line-height: 40px;
+            }
+            
+            p {
+                font-size: 15px;
+                line-height: 25px;
+                padding-bottom: 0.5rem;
+            }
+
+            .switch-btn {
+                border: 2px solid $color-buzz;
+                display: flex;
+                overflow: hidden;
+                width: 100%;
+                border-radius: 8px;
+                text-align: center;
+                // height: 63px;
+            
+                
+
+                .influencer-side {
+                    height: 100%;
+                    flex-basis: 50%;
+                    padding: 7px;
+                    background: $color-white;
+                    color: $color-buzz;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    cursor: pointer;
+                }
+
+                .brand-side {
+                    height: 100%;
+                    flex-basis: 50%;
+                    padding: 7px;
+                    background: $color-buzz;
+                    color: $color-white;
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 30px;
+                    cursor: pointer;
+                }
+            }
+
+            form {
+                padding-top: 0.5rem;
+
+                label {
+                    display: flex;
+                    font-weight: 700;
+                    font-size: 12px;
+                    line-height: 19.5px;
+                    color: #090415A6;
+                    padding-bottom: 0.2rem;
+                    
+                }
+
+                input {
+                    border: 1px solid #090415;
+                    border-radius: 8px;
+                    width: 100%;
+                    padding: 10px;
+                    margin-bottom: 0.5rem;
+                    position: relative;
+
+                    &:focus, :active {
+                        outline: none;
+                    }
+
+                }
+                .username {
+                    border: 1px solid $color-light-blue;
+                }
+
+                .password {
+                    label {
+                        color: $color-red;
+                    }
+
+                    input {
+                        border: 1px solid $color-red;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        color: $color-red;
+                        font-size: 15px;
+                        font-weight: 500;
+                        padding-bottom: 0px;
+                    }
+                }
+            }
+
+            .terms {
+                display: flex;
+                align-items: baseline;
+
+
+                p {
+                    font-size: 14px;
+                    padding-left: 0.5rem;
+
+                }
+                    
+            }
+
+            button {
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 22.5px;
+                padding: 10px;
+                color: $color-white;
+                background: $color-buzz;
+                width: 100%;
+                border: none;
+                border-radius: 8px;
+            }
+
+            .login {
+                font-size: 17px;
+                line-height: 30px;
+                margin-right: 4.7rem;
+                text-align: center;
+            }
+            a {
+                color: $color-buzz;
+                text-decoration: none;
+            }
+        }
+    }
+    
+    @media screen and (max-width: 1024px) {
+        .container {
+            .d-flex{
+                display: none;
+            }
+
+            .b-flex{
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .d-flex {
+            display: none;
+        }
+    }
+    
+    @media screen and (max-width: 640px) {
+        .container {
+            .d-flex{
+                display: none;
+            }
+
+            .b-flex{
+                width: 100%;
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+    }
+}
