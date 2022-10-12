@@ -182,7 +182,7 @@ body .container .b-flex a {
   color: #5B26CF;
   text-decoration: none;
 }
-@media (max-width: 480px) {
+@media (max-width: 640px) {
   body .container .d-flex {
     display: none;
   }
