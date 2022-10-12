@@ -1,3 +1,5 @@
+@import 'breakpoints';
+
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +13,6 @@ $color-light-blue: #2D8ED8;
 
 body {
     font-family: 'Poppins', sans-serif;
-    height: auto;
     // width: 100%;
 
 
@@ -22,14 +23,19 @@ body {
        
 
         .d-flex {
+            background: url(../../images/banner.png);
             position: relative;
             width: 60%;
             height: 100vh;
-            background: url(../../images/banner.jpeg) center center;
+            background-position: -20% 45%;
+            background-size: cover;
+            background-repeat: no-repeat;
             display: flex;
             justify-content: center;
             flex-direction: column;
-            padding: 2.5rem;
+            padding-left: 60px;
+         
+            
 
             &--logo {
                 position: absolute;
@@ -38,42 +44,46 @@ body {
 
             &--heading {
                 font-size: 32px;
+                font-weight: 600;
+                line-height: 50px;
                 color: $color-white;
-                margin-bottom: 2rem;
+                margin-bottom: 3rem;
             }
             &--subtitle {
-                color: $color-white;
-                font-size: 18px;
+                font-size: 15px;
+                line-height: 22.5px;
+                color: #E2D7F9;
             }
 
-            
         }
 
         .b-flex {
             width: 40%;
             padding-left: 5rem;
             padding-right: 5rem;
-            height: 100vh;
+            height: 100%;
+            overflow: auto;
 
             &--title {
-                padding-top: 1rem;
-                font-weight: bolder;
-                font-size: 28px;
-                line-height: 40px;
+                padding-top: 105px;
+                padding-bottom: 12px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
             }
             
             p {
                 font-size: 15px;
-                line-height: 25px;
-                padding-bottom: 0.5rem;
+                line-height: 22.5px;
+                padding-bottom: 40px;
             }
 
             .switch-btn {
-                border: 2px solid $color-buzz;
+                border: 1px solid $color-buzz;
                 display: flex;
                 overflow: hidden;
                 width: 100%;
-                border-radius: 8px;
+                border-radius: 4px;
                 text-align: center;
                 // height: 63px;
             
@@ -85,9 +95,9 @@ body {
                     padding: 7px;
                     background: $color-white;
                     color: $color-buzz;
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 30px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 22.5px;
                     cursor: pointer;
                 }
 
@@ -97,41 +107,49 @@ body {
                     padding: 7px;
                     background: $color-buzz;
                     color: $color-white;
-                    font-size: 16px;
-                    font-weight: 700;
-                    line-height: 30px;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 22.5px;
                     cursor: pointer;
                 }
             }
 
             form {
-                padding-top: 0.5rem;
+                padding-top: 40px;
 
                 label {
                     display: flex;
-                    font-weight: 700;
-                    font-size: 12px;
+                    font-size: 13px;
                     line-height: 19.5px;
                     color: #090415A6;
-                    padding-bottom: 0.2rem;
+                    padding-bottom: 4px;
                     
                 }
 
                 input {
                     border: 1px solid #090415;
-                    border-radius: 8px;
+                    opacity: 25%;
+                    border-radius: 4px;
                     width: 100%;
                     padding: 10px;
-                    margin-bottom: 0.5rem;
+                    margin-bottom: 20px;
                     position: relative;
 
+                    &::placeholder {
+                        font-weight: 400;
+                        font-style: italic;
+                        font-size: 15px;
+                        line-height: 22.5px;
+                        color: #090415;
+                        opacity: 30%;
+                    }
+
                     &:focus, :active {
+                        border: 1px solid #2E1368;
+                        opacity: 75%;
                         outline: none;
                     }
 
-                }
-                .username {
-                    border: 1px solid $color-light-blue;
                 }
 
                 .password {
@@ -141,14 +159,15 @@ body {
 
                     input {
                         border: 1px solid $color-red;
-                        margin-bottom: 0;
+                        margin-bottom: 4px;
                     }
 
                     p {
                         color: $color-red;
-                        font-size: 15px;
+                        font-size: 13px;
                         font-weight: 500;
-                        padding-bottom: 0px;
+                        line-height: 19.5px;
+                        padding-bottom: 8px;
                     }
                 }
             }
@@ -159,7 +178,7 @@ body {
 
 
                 p {
-                    font-size: 14px;
+                    font-size: 15px;
                     padding-left: 0.5rem;
 
                 }
@@ -167,7 +186,7 @@ body {
             }
 
             button {
-                font-size: 12px;
+                font-size: 15px;
                 font-weight: 600;
                 line-height: 22.5px;
                 padding: 10px;
@@ -175,14 +194,16 @@ body {
                 background: $color-buzz;
                 width: 100%;
                 border: none;
-                border-radius: 8px;
+                border-radius: 4px;
             }
 
             .login {
-                font-size: 17px;
-                line-height: 30px;
-                margin-right: 4.7rem;
-                text-align: center;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                font-size: 15px;
+                line-height: 22.5px;
+                padding: 32px 0px 46px 0px;
             }
             a {
                 color: $color-buzz;
@@ -190,8 +211,15 @@ body {
             }
         }
     }
+
+    // .universal-container {
+    //     margin: 0 auto;
+    //     width: 1300px;
+    //     max-width: 100%;
+        
+    // }
     
-    @media screen and (max-width: 1024px) {
+    @include  sm {
         .container {
             .d-flex{
                 display: none;
@@ -199,31 +227,96 @@ body {
 
             .b-flex{
                 width: 100%;
+                padding-left: 1rem;
+                padding-right: 1rem;
+                height: 100vh;
                 align-items: center;
                 text-align: center;
                 justify-content: center;
+
+                &--title {
+                    padding-top: 92px;
+                    padding-bottom: 16px;
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+
+                p {
+                    font-size: 12px;
+                    line-height: 21px;
+                    padding-bottom: 20px;
+                }
+
+                .switch-btn {
+                    width: 80%;
+                    margin-left: 2rem;
+
+                    .influencer-side {
+                        font-size: 12px;
+                        line-height: 21px;
+                    }
+
+                    .brand-side {
+                        font-size: 12px;
+                        line-height: 21px;
+                    }
+                }
+
+                form {
+                    padding-top: 36px;
+
+                    label {
+                        font-size: 12px;
+                        line-height: 21px;
+                        padding-bottom: 1px;
+                    }
+
+                    input {
+                        padding: 8px;
+                        margin-bottom: 16px;
+                    }
+
+                    .password {
+                        p {
+                            text-align: left;
+                            font-size: 12px;
+                            line-height: 21px;
+                        }
+                    }
+                }
+
+                .terms {
+                    p {
+                        font-size: 12px;
+                        padding-bottom: 40px;
+                    }
+                }
+
+                button {
+                    padding: 8px;
+                    font-size: 12px;
+                    line-height: 21px;
+                }
+
+                .login {
+                    font-size: 12px;
+                    line-height: 21px;
+                    padding: 30px 0px 45px 0px;
+                }
             }
         }
     }
 
-    @media screen and (max-width: 768px) {
-        .d-flex {
-            display: none;
-        }
+    @include md {
+      
     }
     
-    @media screen and (max-width: 640px) {
-        .container {
-            .d-flex{
-                display: none;
-            }
+    @include lg {
+        
+    }
 
-            .b-flex{
-                width: 100%;
-                align-items: center;
-                text-align: center;
-                justify-content: center;
-            }
-        }
+    @include xl {
+
     }
 }

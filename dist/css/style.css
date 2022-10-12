@@ -6,21 +6,23 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  height: auto;
 }
 body .container {
   display: flex;
   height: 100vh;
 }
 body .container .d-flex {
+  background: url(../../images/banner.png);
   position: relative;
   width: 60%;
   height: 100vh;
-  background: url(../../images/banner.jpeg) center center;
+  background-position: -20% 45%;
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 2.5rem;
+  padding-left: 60px;
 }
 body .container .d-flex--logo {
   position: absolute;
@@ -28,36 +30,41 @@ body .container .d-flex--logo {
 }
 body .container .d-flex--heading {
   font-size: 32px;
+  font-weight: 600;
+  line-height: 50px;
   color: #fff;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 body .container .d-flex--subtitle {
-  color: #fff;
-  font-size: 18px;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #E2D7F9;
 }
 body .container .b-flex {
   width: 40%;
   padding-left: 5rem;
   padding-right: 5rem;
-  height: 100vh;
+  height: 100%;
+  overflow: auto;
 }
 body .container .b-flex--title {
-  padding-top: 1rem;
-  font-weight: bolder;
-  font-size: 28px;
-  line-height: 40px;
+  padding-top: 105px;
+  padding-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
 }
 body .container .b-flex p {
   font-size: 15px;
-  line-height: 25px;
-  padding-bottom: 0.5rem;
+  line-height: 22.5px;
+  padding-bottom: 40px;
 }
 body .container .b-flex .switch-btn {
-  border: 2px solid #5B26CF;
+  border: 1px solid #5B26CF;
   display: flex;
   overflow: hidden;
   width: 100%;
-  border-radius: 8px;
+  border-radius: 4px;
   text-align: center;
 }
 body .container .b-flex .switch-btn .influencer-side {
@@ -66,9 +73,9 @@ body .container .b-flex .switch-btn .influencer-side {
   padding: 7px;
   background: #fff;
   color: #5B26CF;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22.5px;
   cursor: pointer;
 }
 body .container .b-flex .switch-btn .brand-side {
@@ -77,59 +84,83 @@ body .container .b-flex .switch-btn .brand-side {
   padding: 7px;
   background: #5B26CF;
   color: #fff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22.5px;
   cursor: pointer;
 }
 body .container .b-flex form {
-  padding-top: 0.5rem;
+  padding-top: 40px;
 }
 body .container .b-flex form label {
   display: flex;
-  font-weight: 700;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 19.5px;
   color: rgba(9, 4, 21, 0.6509803922);
-  padding-bottom: 0.2rem;
+  padding-bottom: 4px;
 }
 body .container .b-flex form input {
   border: 1px solid #090415;
-  border-radius: 8px;
+  opacity: 25%;
+  border-radius: 4px;
   width: 100%;
   padding: 10px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 20px;
   position: relative;
 }
-body .container .b-flex form input:focus, body .container .b-flex form input :active {
-  outline: none;
+body .container .b-flex form input::-moz-placeholder {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #090415;
+  opacity: 30%;
 }
-body .container .b-flex form .username {
-  border: 1px solid #2D8ED8;
+body .container .b-flex form input:-ms-input-placeholder {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #090415;
+  opacity: 30%;
+}
+body .container .b-flex form input::placeholder {
+  font-weight: 400;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 22.5px;
+  color: #090415;
+  opacity: 30%;
+}
+body .container .b-flex form input:focus, body .container .b-flex form input :active {
+  border: 1px solid #2E1368;
+  opacity: 75%;
+  outline: none;
 }
 body .container .b-flex form .password label {
   color: rgba(255, 0, 0, 0.8);
 }
 body .container .b-flex form .password input {
   border: 1px solid rgba(255, 0, 0, 0.8);
-  margin-bottom: 0;
+  margin-bottom: 4px;
 }
 body .container .b-flex form .password p {
   color: rgba(255, 0, 0, 0.8);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 500;
-  padding-bottom: 0px;
+  line-height: 19.5px;
+  padding-bottom: 8px;
 }
 body .container .b-flex .terms {
   display: flex;
   align-items: baseline;
 }
 body .container .b-flex .terms p {
-  font-size: 14px;
+  font-size: 15px;
   padding-left: 0.5rem;
 }
 body .container .b-flex button {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   line-height: 22.5px;
   padding: 10px;
@@ -137,42 +168,86 @@ body .container .b-flex button {
   background: #5B26CF;
   width: 100%;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 body .container .b-flex .login {
-  font-size: 17px;
-  line-height: 30px;
-  margin-right: 4.7rem;
-  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 15px;
+  line-height: 22.5px;
+  padding: 32px 0px 46px 0px;
 }
 body .container .b-flex a {
   color: #5B26CF;
   text-decoration: none;
 }
-@media screen and (max-width: 1024px) {
+@media (max-width: 480px) {
   body .container .d-flex {
     display: none;
   }
   body .container .b-flex {
     width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    height: 100vh;
     align-items: center;
     text-align: center;
     justify-content: center;
   }
-}
-@media screen and (max-width: 768px) {
-  body .d-flex {
-    display: none;
+  body .container .b-flex--title {
+    padding-top: 92px;
+    padding-bottom: 16px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
   }
-}
-@media screen and (max-width: 640px) {
-  body .container .d-flex {
-    display: none;
+  body .container .b-flex p {
+    font-size: 12px;
+    line-height: 21px;
+    padding-bottom: 20px;
   }
-  body .container .b-flex {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
+  body .container .b-flex .switch-btn {
+    width: 80%;
+    margin-left: 2rem;
+  }
+  body .container .b-flex .switch-btn .influencer-side {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body .container .b-flex .switch-btn .brand-side {
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body .container .b-flex form {
+    padding-top: 36px;
+  }
+  body .container .b-flex form label {
+    font-size: 12px;
+    line-height: 21px;
+    padding-bottom: 1px;
+  }
+  body .container .b-flex form input {
+    padding: 8px;
+    margin-bottom: 16px;
+  }
+  body .container .b-flex form .password p {
+    text-align: left;
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body .container .b-flex .terms p {
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
+  body .container .b-flex button {
+    padding: 8px;
+    font-size: 12px;
+    line-height: 21px;
+  }
+  body .container .b-flex .login {
+    font-size: 12px;
+    line-height: 21px;
+    padding: 30px 0px 45px 0px;
   }
 }/*# sourceMappingURL=style.css.map */
